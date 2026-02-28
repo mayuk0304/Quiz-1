@@ -1,0 +1,137 @@
+/* General Reset */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Header Section */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  border-bottom: 1px solid #ddd;
+}
+
+.logo {
+  font-size: 1.5em;
+}
+
+.nav a {
+  margin-right: 16px;
+  font-weight: bold;
+}
+
+/* Mobile Styles for Header */
+@media (max-width: 600px) {
+  .nav {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .nav a {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px; /* Horizontal padding */
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-card {
+  width: 240px;
+  padding: 16px;
+  border: 1px solid #ddd;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+/* Mobile Hero Styles */
+@media (max-width: 600px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-card {
+    margin-top: 20px;
+  }
+}
+
+/* Grid Section */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Default 4 columns */
+  gap: 12px;
+  padding: 20px 0;
+}
+
+.card {
+  border: 1px solid #ddd;
+  padding: 18px;
+  text-align: center;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+/* Tablet Styles for Grid (2 columns) */
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+  }
+}
+
+/* Mobile Styles for Grid (1 column) */
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr; /* 1 column for mobile */
+  }
+}
+
+/* Hover Effects */
+.btn {
+  display: inline-block;
+  padding: 10px 14px;
+  border: 1px solid black;
+  text-decoration: none;
+  background-color: #007BFF;
+  color: white;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+.card:hover {
+  transform: scale(1.05); /* Slight scaling effect */
+}
+
+/* Footer Section */
+.footer {
+  padding: 16px;
+  text-align: center;
+  border-top: 1px solid #ddd;
+}
